@@ -1,0 +1,85 @@
+
+*
+	font-family: "Open sans", sans-serif
+	line-height: 1
+	font-weight: 400
+
+
+h1,h2,h3,h4,h5,h6
+	color: $dark
+	font-weight: bold
+	margin: 0
+
+	h1,.h1
+		font-size: 24px
+		line-height: 1.2
+		margin-bottom: 1em
+		text-transform: uppercase
+		&:last-child
+			margin-bottom: 0
+	+r(1199)
+		font-size: 20px
+
+	h2, .h2
+		font-size: 24px
+		line-height: 1.2
+		margin-bottom: 1em
+		text-transform: uppercase
+
+
+	h3, .h3
+		font-size: 19px
+		line-height: 1.2
+		margin-bottom: 1em
+		&:last-child
+			margin-bottom: 0
+	
+
+p,
+span
+	margin: 0
+	font-size: 16px
+	line-height: 1.6
+	color: $black
+	font-weight: 400
+	+r(999)
+		line-height: 1.45
+
+span,
+a
+	font-family: inherit
+	font-size: inherit
+	font-weight: inherit
+	line-height: inherit
+
+a
+	text-decoration: none
+	color: inherit
+
+li
+  margin-bottom: 1em
+  font-size: 14px
+  line-height: 1.2
+  font-weight: normal
+  &:last-child
+    margin-bottom: 0
+
+.typography
+	.alignright
+		float: right
+	.alignleft
+		float: left
+	img
+		max-width: 100%
+		display: block
+		height: auto
+	h2,
+	h3,
+	h4,
+	h5,
+	p
+		margin-bottom: 2em
+		line-height: 1.5
+	p
+		&:last-child
+					margin-bottom: 0
