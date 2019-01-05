@@ -37,162 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
          },
          "Пароли должны совпадать")
 
-   $.validator.addMethod("notnumbers", function (value, element) {
-     var Reg61 = new RegExp("^.*[^A-zА-яЁёіЇїЄєҐґ ].*$");
-     return !Reg61.test(value);
-   });
-   //add validation rules
-   var rules = {
-     email: {
-       required: true,
-       email: true,
-     },
-     name: {
-       required: true,
-       notnumbers: true,
-       minlength: 2,
-     },
-     place: {
-       required: true,
-       notnumbers: true,
-       minlength: 2,
-     },
-     password: {
-           required: true,
-           minlength: 6,
-       },
-     passwordcorrect: {
-         required: true,
-         minlength: 6,
-         correctPassword: true,
-     },
-     city: {
-       required: true,
-       notnumbers: true,
-       minlength: 2,
-     },
-     surname: {
-       required: true,
-       notnumbers: true,
-       minlength: 2,
-       maxlength: 32,
-     },
-     phone: {
-       required: true,
-       plus: true,
-       minlength: 10
-       // digits: true,
-     },
-     zip: {
-       required: true,
-       plus: true,
-       minlength: 3
-       // digits: true,
-     },
-     theme: {
-       required: true,
-       minlength: 2,
-     },
-     question: {
-       required: true,
-       minlength: 2,
-     },
-     message: {
-       required: true,
-       minlength: 3,
-     },
-     approve: {
-       required: true,
-     },
-     select1: {
-       required: true,
-     },
-     select2: {
-       required: true,
-     },
-     radio2: {
-       required: true,
-     },
-     radio: {
-       required: true,
-     },
-   }
-   var messages = {
-     email: {
-       required: $('input[name="email"]').attr('data-error'),
-       email: $('input[name="email"]').attr('data-error'),
-     },
-     name: {
-       required: $('input[name="name"]').attr('data-error'),
-       minlength: $('input[name="name"]').attr('data-error'),
-       notnumbers: $('input[name="name"]').attr('data-error'),
-     },
-     surname: {
-       required: $('input[name="surname"]').attr('data-error'),
-       minlength: $('input[name="surname"]').attr('data-error'),
-       notnumbers: $('input[name="surname"]').attr('data-error'),
-     },
-     place: {
-       required: $('input[name="city"]').attr('data-error'),
-       minlength: $('input[name="place"]').attr('data-error'),
-       notnumbers: $('input[name="place"]').attr('data-error'),
-     },
-     theme: {
-       required: $('input[name="theme"]').attr('data-error'),
-       minlength: $('input[name="theme"]').attr('data-error'),
-     },
-     question: {
-       required: $('textarea[name="question"]').attr('data-error'),
-       minlength: $('textarea[name="question"]').attr('data-error'),
-     },
-     phone: {
-       required: $('input[name="phone"]').attr('data-error'),
-       digits: $('input[name="phone"]').attr('data-error'),
-       plus: $('input[name="phone"]').attr('data-error'),
-       minlength: $('input[name="phone"]').attr('data-error'),
-     },
-     password: {
-           required: $('input[name="password"]').attr('data-error'),
-           minlength: $('input[name="password"]').attr('data-error'),
-       },
-     passwordcorrect: {
-         required: $('input[name="passwordcorrect"]').attr('data-error'),
-         minlength: $('input[name="passwordcorrect"]').attr('data-error'),
-         correctPassword: $('input[name="passwordcorrect"]').attr('data-error'),
-     },
-     city: {
-       required: $('input[name="city"]').attr('data-error'),
-       minlength: $('input[name="city"]').attr('data-error'),
-       notnumbers: $('input[name="city"]').attr('data-error'),
-     },
-     question: {
-       required: $('input[name="message"]').attr('data-error'),
-       minlength: $('input[name="message"]').attr('data-error'),
-     },
-     zip: {
-       required: $('input[name="zip"]').attr('data-error'),
-       digits: $('input[name="zip"]').attr('data-error'),
-       minlength: $('input[name="zip"]').attr('data-error'),
-     },
-     approve: {
-       required: $('input[name="approve"]').attr('data-error'),
-     },
-     select1: {
-       required: $('input[name="select1"]').attr('data-error'),
-     },
-     select2: {
-       required: $('input[name="select2"]').attr('data-error'),
-     },
-     radio: {
-       required: $('input[name="radio"]').attr('data-error'),
-     },
-     radio2: {
-       required: $('input[name="radio2"]').attr('data-error'),
-     },
-
-   };
-
-   // validation example
+      // validation example
     if (document.querySelector('#your-id')) {
       let form = $('#your-id');
       form.validate({
@@ -260,5 +105,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // js-close popup
+  if(document.querySelector('.s_slider_main')){
+    $('.s_slider_main_images').slick({
+      infinite: true,
+      dots : true,
+      arrows: false,
+    });
 
+  }
+  
 });
