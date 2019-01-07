@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('#contacts-popup').reset();
     }
   });
-
+  
   // js-close popup
   if(document.querySelector('.s_slider_main')){
     $('.s_slider_main_images').slick({
@@ -114,5 +114,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
+
+  if(document.querySelector('.js_slider_client')){
+    $('.js_slider_client').slick({
+      infinite: true,
+      dots : false,
+      arrows: true,
+      slidesToShow: 11,
+      slidesToScroll: 3,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
+
+  }
+  new WOW().init();
   
 });

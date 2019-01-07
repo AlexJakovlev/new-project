@@ -2232,4 +2232,17 @@ document.addEventListener('DOMContentLoaded', function () {
             arrows: false
         });
     }
+
+    if (document.querySelector('.js_slider_client')) {
+        $('.js_slider_client').slick({
+            infinite: true,
+            dots: false,
+            arrows: true,
+            slidesToShow: 11,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+    }
+    new WOW().init();
 });
