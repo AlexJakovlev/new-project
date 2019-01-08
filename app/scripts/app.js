@@ -2244,5 +2244,15 @@ document.addEventListener('DOMContentLoaded', function () {
             autoplaySpeed: 2000
         });
     }
+
+    if (document.querySelector('.js_slider_review')) {
+        $('.js_slider_review').slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
+    }
+
     new WOW().init();
 });

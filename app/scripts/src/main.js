@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
-
+  
   if(document.querySelector('.js_slider_client')){
     $('.js_slider_client').slick({
       infinite: true,
@@ -127,6 +127,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
+
+  if(document.querySelector('.js_slider_review')){
+    $('.js_slider_review').slick({
+      dots : false,
+      arrows: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    });
+
+  }
+  
   new WOW().init();
   
 });
