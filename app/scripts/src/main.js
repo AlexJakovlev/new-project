@@ -120,8 +120,8 @@ document.addEventListener('DOMContentLoaded', function () {
       infinite: true,
       dots : false,
       arrows: true,
-      slidesToShow: 11,
-      slidesToScroll: 3,
+      slidesToShow: 3,
+      slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
     });

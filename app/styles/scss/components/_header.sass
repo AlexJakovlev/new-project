@@ -9,6 +9,8 @@
     display: none
   &_icon_phone
     margin-right: 10px
+    .blue_phone_image
+      fill:#8ED9FF
     .blue
       padding-top: 1px
     .white
@@ -23,7 +25,7 @@
       color: #fff
       font-size: 9px
       a
-        font-size: 31px
+        font-size: 26px
         font-weight: 700
         line-height: 1
   
@@ -42,22 +44,24 @@
     &_text
       p
         color: #fff22b
-        font-size: 18px
+        font-size: 16px
         text-transform: uppercase
     &_image
       position: relative
       margin-right: 10px
       width: 32px
       height: 32px
-      svg
+      img
         position: absolute
         transition: 0.2s ease
     &_arrows
+      position: absolute
       left: 50%
       top: 50%
       transform: translate(-50%, -50%)
     &_phone,
     &_phone_hover
+      position: absolute
       left: 50%
       top: 50%
       transform: translate(-50%, -50%)
@@ -81,7 +85,7 @@
     position: relative
     &_number
       height: 32px
-      width: 184px
+      width: 220px
       outline-color: #a7a9ac
       border-radius: 3px
       border: none
@@ -99,6 +103,11 @@
     img
       display: block
   &_cabinet_client
+    position: relative
+    a
+      position: absolute
+      width: 21px
+      height: 26px
     .cabinet_blue
       display: none
     &:hover
@@ -106,9 +115,11 @@
         display: block
       .cabinet_white
         display: none
+  &_social > a
+    padding-right: 5px
   &_languages
     p
-      font-size: 18px
+      font-size: 14px
       color: #fff
        
 

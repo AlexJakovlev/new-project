@@ -5,7 +5,7 @@
  *
  */
 
-;(function (window, document) {
+(function (window, document) {
 	'use strict';
 
 	var supports = function (){

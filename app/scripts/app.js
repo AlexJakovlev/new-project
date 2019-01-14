@@ -1861,7 +1861,7 @@
  *
  */
 
-;(function (window, document) {
+(function (window, document) {
     'use strict';
 
     var supports = function () {
@@ -2238,8 +2238,8 @@ document.addEventListener('DOMContentLoaded', function () {
             infinite: true,
             dots: false,
             arrows: true,
-            slidesToShow: 11,
-            slidesToScroll: 3,
+            slidesToShow: 3,
+            slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2000
         });
@@ -2249,7 +2249,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $('.js_slider_review').slick({
             dots: false,
             arrows: true,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1
         });
     }
