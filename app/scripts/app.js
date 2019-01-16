@@ -2257,3 +2257,19 @@ document.addEventListener('DOMContentLoaded', function () {
     new WOW().init();
   }
 });
+
+(function main() {
+  document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+
+  function DOMContentLoaded() {
+    var buttonNode = document.querySelector('.js-show-form');
+    buttonNode.addEventListener('click', showForm);
+  }
+
+  function showForm() {
+    var button = document.querySelector('.js-show-form');
+    var node = document.querySelector('.js-form');
+    node.classList.remove('hidden');
+    button.classList.add('hiddenButton');
+  }
+})();

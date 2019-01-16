@@ -1,18 +1,36 @@
 .s_delivery_countries
-    
     margin-bottom: 40px
+    +r(999)
+        margin-bottom: 30px
     &_wrapper
         padding-top: 20px
         background-image: url(../images/delivery_countries.jpg)
         background-repeat: no-repeat
         +r(1024)
-             background-image: url(../images/pad_delivery_countries.jpg)
+            background-image: url(../images/pad_delivery_countries.jpg)
+        +r(999)
+            background: none
+    &_banner_pad_mob
+        display: none
+        +r(999)
+            display: block
+            width: 100%
+            margin-bottom: 18px
     &_wrapper_title
         margin-bottom: 35px
+        +r(999)
+            margin-bottom: 30px
+            text-align: center
+        +r(768)
+            margin-bottom: 20px           
     &_wrapper_list
-        max-width: 314px
+        max-width: 420px
+        +r(999)
+            margin: 0 auto
         ul
-            max-width: 157px
+            max-width: 420px
+            column-count: 2
+            width: 100%
 
             li
                 height: 30px

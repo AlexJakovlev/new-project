@@ -1,5 +1,7 @@
 .s_traffic
     margin-bottom: 40px
+    +r(999)
+        margin-bottom: 30px
     &_wrapper
         padding-top: 40px
         padding-left: 600px
@@ -10,13 +12,31 @@
         +r(1024)
             padding-left: 400px
             background-image: url(../images/pad_raffic_background.jpg)
+        +r(999)
+            background: none
+            max-width: 100%
+            width: 100%
+            padding-left: 0
+    &_banner_pad_mob
+        display: none
+        +r(999)
+            display: block
+            width: 100%
+            margin-bottom: 18px
     &_wrapper_title
         width: 400px
         margin-bottom: 35px
+        +r(999)
+            width: 100%
         h2
             width: 400px
+            +r(999)
+                width: 100%
+                text-align: center
     &_wrapper_list
         width: 550px
+        +r(999)
+            margin: 0 auto
         ul
             max-width: 550px
             column-count: 2

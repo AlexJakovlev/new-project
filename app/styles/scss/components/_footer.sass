@@ -5,6 +5,7 @@
     background-size: cover
     +r(1024)
         padding-top: 20px
+        background-image: url(../images/pad_background_footer.png)
     &_first_item
         margin-bottom: 20px
         +r(1024)
@@ -23,6 +24,8 @@
         +r(1024)
             margin: 0 auto
             margin-bottom: 10px
+        +r(999)
+            max-width: 50%
         p
             margin-bottom: 25px
             font-size: 16px
@@ -34,6 +37,9 @@
         +r(1024)
             max-width: 100%
             width: 100%
+        &_list
+            +r(1024)
+            justify-content: space-around
         p
             margin-bottom: 25px
             font-size: 16px
@@ -77,6 +83,8 @@
             max-width: 100%
             width: 100%
             padding-left: 50px
+            +r(768)
+                padding-left: 0
             .seo_links_white
                 column-count: 4
                 li
@@ -90,6 +98,8 @@
                     &:hover
                         background: url(../images/arrow_right_black.png) no-repeat 0 0px
                         color: #000
+                    +r(768)
+                        margin-right: 0
     &_copyrights
         color: #fff
         font-size: 12px

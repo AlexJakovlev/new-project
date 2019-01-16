@@ -1,5 +1,7 @@
 .s_about_company
     margin-bottom: 50px;
+    +r(999)
+        margin-bottom: 30px
     &_wrapper
         +r(1024)
             flex-direction: row-reverse
@@ -79,6 +81,45 @@
                 border-radius: 3px
                 width: 150px
                 height: 40px
+    .mob_button
+        display: none
+        +r(768)
+            font-family: 'Roboto', sans-serif
+            display: block
+            margin-bottom: 20px
+            text-align: center
+            width: 100%
+            p
+                font-size: 12px
+                margin-bottom: 10px
+                a
+                    font-size: 22px
+                    color: #000
+    .hidden
+        display: block
+        +r(768)
+            display: none
+    .js-show-form
+        display: none
+        +r(768)
+            font-family: 'Roboto', sans-serif
+            display: block
+            margin: 0 auto
+            width: 200px
+            height: 45px
+            background: #ffe175 /* Old browsers */
+            background: -moz-linear-gradient(top, #ffe175 2%, #ffcb05 15%, #ffcb05 85%, #fbaa19 98%) /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #ffe175 2%,#ffcb05 15%,#ffcb05 85%,#fbaa19 98%) /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #ffe175 2%,#ffcb05 15%,#ffcb05 85%,#fbaa19 98%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe175', endColorstr='#fbaa19',GradientType=0 ) /* IE6-9 */
+            color: #000
+            border: none
+            font-size: 16px
+            cursor: pointer
+            border-radius: 3px
+    .hiddenButton
+        display: none
+
 
 
     
