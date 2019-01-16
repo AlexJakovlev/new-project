@@ -3,29 +3,47 @@
     background-image: url(../images/background_footer_2.png)
     background-repeat: no-repeat
     background-size: cover
+    +r(1024)
+        padding-top: 20px
     &_first_item
-        margin-bpttom: 20px
+        margin-bottom: 20px
+        +r(1024)
+            flex-wrap: wrap
     .asociated
         max-width: 25%
         text-align: center
+        +r(1024)
+            display: none
         p
             margin-bottom: 25px
             font-size: 16px
     .social
         max-width: 25%
         text-align: center
+        +r(1024)
+            margin: 0 auto
+            margin-bottom: 10px
         p
             margin-bottom: 25px
             font-size: 16px
+            +r(1024)
+                margin-bottom: 10px
     .contacts
         max-width: 50%
         text-align: center
+        +r(1024)
+            max-width: 100%
+            width: 100%
         p
             margin-bottom: 25px
             font-size: 16px
             color: #000
+            +r(1024)
+                margin-bottom: 18px
         p.title
             margin-bottom: 30px
+            +r(1024)
+                margin-bottom: 20px
         .contacts_list_item_ukr
             margin-right: 10px
             .contacts_adress
@@ -51,6 +69,8 @@
                 &:hover
                     background: url(../images/Geo_icon_hover.png) no-repeat 0 0px
                     color: $darkblue
+                +r(1024)
+                    height: 36px
     &_second_item
         padding: 20px 0
         &_white

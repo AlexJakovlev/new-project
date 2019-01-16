@@ -1,22 +1,45 @@
 .s_about_company
     margin-bottom: 50px;
+    &_wrapper
+        +r(1024)
+            flex-direction: row-reverse
+            flex-wrap: wrap-reverse
     &_text_section
         max-width: 582px
         width: 100%
+        +r(1024)
+            max-width: 100%
         &_title
             margin-bottom: 20px
+            .banner_pad_mob
+                display: none
+                +r(1024)
+                    display: block
+                    width: 100%
+                    margin-bottom: 18px
         &_text
             img
                 float: left
                 margin-right: 20px
+                +r(1024)
+                    display: none
                 
     .blue_title
         font-size: 18px
         color: $blue
         text-transform: uppercase
+        +r(1024)
+            text-transform: none
+            color: $darkblue
+            text-align: center
+            font-size: 24px
     &_form_section
         width: 487px
         background-image: url(../images/background_form.jpg)
+        +r(1024)
+            display: block
+            margin: 0 auto
+            margin-bottom: 50px
         p
             text-align: center
             color: #000

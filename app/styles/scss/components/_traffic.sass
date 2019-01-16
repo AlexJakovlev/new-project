@@ -2,21 +2,25 @@
     margin-bottom: 40px
     &_wrapper
         padding-top: 40px
-        padding-left: 775px
+        padding-left: 600px
         margin-bottom: 40px
-        max-width: 410px
+        max-width: 510px
         background-image: url(../images/traffic_background.jpg) 
         background-repeat: no-repeat
-        +r(999)
+        +r(1024)
+            padding-left: 400px
+            background-image: url(../images/pad_raffic_background.jpg)
     &_wrapper_title
         width: 400px
         margin-bottom: 35px
         h2
             width: 400px
     &_wrapper_list
-        width: 400px
+        width: 550px
         ul
-            max-width: 400px
+            max-width: 550px
+            column-count: 2
+            
 
             li
                 height: 30px
@@ -24,5 +28,7 @@
                 background: url(../images/Arrow_right_list.jpg) no-repeat 0 0px
                 padding-left: 24px
                 &:hover
+                    background: url(../images/Arrow_right_hover_list.png) no-repeat 0 0px
+                +r(1024)
                     background: url(../images/Arrow_right_hover_list.png) no-repeat 0 0px
 

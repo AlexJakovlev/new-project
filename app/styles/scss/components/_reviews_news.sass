@@ -2,12 +2,17 @@
     margin-bottom: 40px
     &_wrapper
         width: 100%
+        +r(1024)
+            flex-wrap: wrap
        
     &_review
         width: 100%
         max-width: 50%    
         text-align: center
         padding: 0 10px
+        +r(1024)
+            margin: 0 auto
+            margin-bottom: 40px
         &_title
             margin-bottom: 25px
         &_slider
@@ -20,6 +25,8 @@
         max-width: 50%    
         text-align: center
         padding-left: 30px
+        +r(1024)
+            max-width: 100%
         &_item
             margin-bottom: 20px
         &_title

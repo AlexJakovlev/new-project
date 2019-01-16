@@ -1,20 +1,26 @@
 .s_header
- 
   background-color: #00a2d9
   &_wrapper
     height: 56px
     align-items: center
-
   &_logo_mobile
     display: none
+    +r(1024)
+      display: block
+  &_phone_number
+    +r(1024)
+      display: none
   &_icon_phone
     margin-right: 10px
+    +r(1024)
+      display: none
     .blue_phone_image
       fill:#8ED9FF
     .blue
       padding-top: 1px
     .white
       display: none
+   
   &_phone_number
     align-items: center
     &:hover .white
@@ -28,9 +34,24 @@
         font-size: 26px
         font-weight: 700
         line-height: 1
+  &_phone_tab
+    display: none
+    +r(1024)
+      display: block
+    p
+      display: inline-block
+    a
+      font-size: 18px
+      font-weight: 700
+      line-height: 1
+      color: #fff
+    object
+      margin-right: 5px
   
   &_callback
     align-items: center
+    +r(1024)
+      display: none
     &:hover
       .s_header_callback_arrows
         transform: translate(-50%, -50%) rotate(179deg)
@@ -70,6 +91,8 @@
     
   &_mail
     align-items: center
+    +r(1024)
+      display: none
     .mail_hover
       display: none
     &:hover
@@ -90,6 +113,8 @@
       border-radius: 3px
       border: none
       padding-left: 10px
+      +r(1024)
+      height: 30px
   &_submit
     height: 22px
     width: 20px
@@ -110,17 +135,92 @@
       height: 26px
     .cabinet_blue
       display: none
+    .cabinet_yellow
+      display: none
     &:hover
       .cabinet_blue
         display: block
+        +r(1024)
+        display: none
       .cabinet_white
         display: none
+    +r(1024)
+      .cabinet_white
+        display: none
+      .cabinet_yellow
+        display: block
   &_social > a
     padding-right: 5px
+  &_social
+    +r(1024)
+      display: none
   &_languages
+    +r(1024)
+      display: none
     p
       font-size: 14px
-      color: #fff
+      color: #ffffff
+  &_callback_pad
+    display: none
+    +r(1024)
+      display: block
+      button
+        width: 76px
+        height: 30px
+        border: 1px solid #e6e7e8
+        border-radius: 2px
+        background: #e6e7e8 /* Old browsers */
+        background: -moz-linear-gradient(top, #e6e7e8 42%, #d1d3d4 66%) /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #e6e7e8 42%,#d1d3d4 66%) /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #e6e7e8 42%,#d1d3d4 66%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e7e8', endColorstr='#d1d3d4',GradientType=0 ) /* IE6-9 */
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(0,118,157,1)
+        -moz-box-shadow: 1px 1px 1px 0px rgba(0,118,157,1);
+        box-shadow: 1px 1px 1px 0px rgba(0,118,157,1);
+        font-size: 12px
+        color: #047ba4
+        line-height: 1
+  &_mail_pad
+    display: none
+    +r(1024)
+      display: block
+      a
+        width: 46px
+        height: 30px
+        display: block
+        text-align: center
+        border: 1px solid #e6e7e8
+        border-radius: 2px
+        background: #e6e7e8 /* Old browsers */
+        background: -moz-linear-gradient(top, #e6e7e8 42%, #d1d3d4 66%) /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #e6e7e8 42%,#d1d3d4 66%) /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #e6e7e8 42%,#d1d3d4 66%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e7e8', endColorstr='#d1d3d4',GradientType=0 ) /* IE6-9 */
+        -webkit-box-shadow: 1px 1px 1px 0px rgba(0,118,157,1)
+        -moz-box-shadow: 1px 1px 1px 0px rgba(0,118,157,1);
+        box-shadow: 1px 1px 1px 0px rgba(0,118,157,1);
+        font-size: 12px
+        color: #047ba4
+        line-height: 1
+        object
+          margin-top: 5px
+  &_burger .site_burger
+    display: none
+    +r(1024)
+      display: block
+      width: 6px
+      height: 26px
+      margin-right: 10px
+      cursor: pointer
+      background: none
+      background-image: url(../images/burger_icon.png)
+      border: none
+  .s_header_burger--open .site_burger
+    background-image: url(../images/krestik.png)
+    width: 11px
+    height: 11px
+
+
        
 
    

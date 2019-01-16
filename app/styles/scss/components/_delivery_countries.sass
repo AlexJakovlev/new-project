@@ -5,6 +5,8 @@
         padding-top: 20px
         background-image: url(../images/delivery_countries.jpg)
         background-repeat: no-repeat
+        +r(1024)
+             background-image: url(../images/pad_delivery_countries.jpg)
     &_wrapper_title
         margin-bottom: 35px
     &_wrapper_list
@@ -18,4 +20,6 @@
                 background: url(../images/Arrow_right_list.jpg) no-repeat 0 0px
                 padding-left: 24px
                 &:hover
+                    background: url(../images/Arrow_right_hover_list.png) no-repeat 0 0px
+                +r(1024)
                     background: url(../images/Arrow_right_hover_list.png) no-repeat 0 0px
