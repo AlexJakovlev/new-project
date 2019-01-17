@@ -1,9 +1,12 @@
-.s_slider_main
-    padding-bottom: 20px
+.s_mob_header_slider_main
+    display: none
     +r(639)
-        display: none
+        display: block
+    &_title
+        text-align: center
+        margin: 15px auto
     &_wrapper
-        margin-bottom: 50px
+        margin-bottom: 75px
     .slick-slide 
         img
             width: 100%
@@ -31,4 +34,3 @@
         background: #e4dddb
     li.slick-active button 
         background: $blue
-

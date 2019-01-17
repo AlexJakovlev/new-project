@@ -35,6 +35,10 @@
             color: $darkblue
             text-align: center
             font-size: 24px
+        +r(768)
+            font-size: 20px
+        +r(639)
+            font-size: 18px
     &_form_section
         width: 487px
         background-image: url(../images/background_form.jpg)
@@ -119,6 +123,24 @@
             border-radius: 3px
     .hiddenButton
         display: none
+    &_advantages_items_mob
+        display: none
+        justify-content: space-around
+        flex-wrap: wrap
+        width: 100%
+        +r(639)
+            display: block
+    .s_advantages_items
+        display: none
+        +r(639)
+            display: block
+            width: 100%
+            margin-bottom: 30px
+    .s_advantages_item
+        max-width: 50%
+        width: 49%
+        display: inline-block
+        margin-bottom: 15px
 
 
 

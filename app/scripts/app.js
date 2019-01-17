@@ -2233,6 +2233,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  if (document.querySelector('.s_mob_header_slider_main')) {
+    $('.s_mob_header_slider_main_images').slick({
+      infinite: true,
+      dots: true,
+      arrows: false
+    });
+  }
+
   if (document.querySelector('.js_slider_client')) {
     $('.js_slider_client').slick({
       infinite: true,
