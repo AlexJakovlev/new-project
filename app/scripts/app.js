@@ -2241,6 +2241,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  if (document.querySelector('.s_new_slider')) {
+    $('.s_new_slider').slick({
+      infinite: true,
+      dots: true,
+      arrows: false
+    });
+  }
+
   if (document.querySelector('.js_slider_client')) {
     $('.js_slider_client').slick({
       infinite: true,
@@ -2257,7 +2265,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.js_slider_review').slick({
       dots: false,
       arrows: true,
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1
     });
   }
