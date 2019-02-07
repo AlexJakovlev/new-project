@@ -5,8 +5,13 @@
         margin-bottom: 36px
     &_items
         justify-content: space-around 
+        +r(768)
+            flex-wrap: wrap
     &_item
         text-align: center
+        +r(768)
+            width: 30%
+            margin-bottom: 30px
         object
             height: 56px
             display: block

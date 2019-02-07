@@ -3,6 +3,9 @@
     &_title
         h1
             margin-bottom: 30px
+    &_linlBlock
+        +r(639)
+            display: none
     &_linlBlock_item
         flex-grow: 1
         margin-right: 10px
@@ -10,3 +13,23 @@
             margin-right: 0
         img
             width: 100%
+    &_linkBlock_mobile
+        display: none
+        +r(639)
+            display: flex
+        &_item
+            flex-grow: 1
+            margin-right: 10px
+            &:last-child
+                margin-right: 0
+            img
+                width: 100%
+            p
+                text-align: center
+                font-size: 14px
+                margin: 5px auto
+                text-transform: uppercase
+                font-weight: bold
+                &:last-child
+                    text-transform: none
+                    font-weight: normal
