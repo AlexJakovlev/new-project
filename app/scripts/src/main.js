@@ -86,7 +86,21 @@ document.addEventListener('DOMContentLoaded', function () {
       $('body').removeClass('body-overflow');
     },3000)
   }
-
+  //js open delivery
+  if(document.querySelector('.js-open-delivery')){
+    $('.js-open-delivery').click(function(e){
+      var linkEvent = $(this).attr("href");
+      var idPopup = linkEvent.slice(1);
+      console.log(linkEvent);
+      console.log(idPopup);
+    e.preventDefault();
+     var sliderContacts = document.querySelector('.slider-contacts');
+     console.log(sliderContacts);
+    $('#'+ idPopup).fadeIn();
+    $('.slider-contacts').slick();
+      
+    })
+  }
   // js-close popup
   if(document.querySelector('.js-popup-close')){
     $('.js-popup-close').click(function(){
@@ -180,3 +194,12 @@ document.addEventListener('DOMContentLoaded', function () {
     button.classList.add('hiddenButton');
   }
 })();
+
+if(document.querySelector('.s_faq_content_questions_item')){
+  var questions = document.querySelectorAll('.s_faq_content_question');
+  Array.prototype.forEach.call(questions, function(el){
+  el.onclick = function(){
+    this.nextElementSibling.classList.toggle('show');
+  }
+  });
+}

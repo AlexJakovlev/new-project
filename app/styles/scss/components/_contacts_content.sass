@@ -1,0 +1,76 @@
+.s_contacts_content
+    margin-bottom: 50px;
+    +r(999)
+        margin-bottom: 30px
+    &_title
+        margin-bottom: 30px
+    &_offices
+        flex-wrap: wrap
+        &_item
+            margin-bottom: 20px
+            width: 100%
+            max-width: 50%
+            justify-content: flex-start
+            +r(768)
+                max-width: 100%
+            &_img
+                margin-right: 20px
+                max-width: 50%
+                img
+                    margin-bottom: 10px
+                    width: 100%
+                a
+                    color: $blue
+                    font-size: 14px
+                    text-decoration: underline
+                    display: block
+            &_adress
+                p
+                    margin-bottom: 10px
+                    +r(1024)
+                        font-size: 12px
+                        margin-bottom: 5px
+                    span
+                        color: $blue
+                        font-weight: 700
+    .s_popup_content
+        background-color: #fff0
+        max-width: 583px
+        img
+            max-width: 583px
+        .s_popup_close 
+            top: 0px
+            right: 0
+   
+    .slick-arrow
+        position: absolute
+        top: 50%
+        cursor: pointer
+        display: inline-block
+        border: none
+        font-size: 0
+        outline: none
+        z-index: 10000000
+        background: url(../images/Arrow_left1.png)
+        width: 20px
+        height: 18px
+        padding: 3px
+        background-size: cover
+        &:hover
+            background: url(../images/Arrow_left_hover.png)
+            background-size: cover
+            background-repeat: no-reapet
+    .slick-arrow.slick-next
+        right: -45px
+        transform: translateY(-50%) rotate(-180deg)
+        +r(1365)
+            right: 0px
+        +r(1023)
+            right: 10px
+    .slick-arrow.slick-prev
+        transform: translateY(-50%) rotate(0deg)
+        left: -45px
+        +r(1365)
+            left: 0px
+        +r(1023)
+            left: 10px 
