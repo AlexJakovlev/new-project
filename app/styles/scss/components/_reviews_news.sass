@@ -6,26 +6,6 @@
         width: 100%
         +r(1024)
             flex-wrap: wrap
-       
-    &_review
-        width: 100%
-        max-width: 50%    
-        text-align: center
-        padding: 0 10px
-        +r(1024)
-            margin: 0 auto
-            margin-bottom: 40px
-        +r(639)
-            max-width: 70%
-        &_title
-            margin-bottom: 25px
-            +r(768)
-                margin-bottom: 20px
-        &_slider
-            padding: 0 20px
-        img
-            padding: 0 10px;
-
     &_new
         width: 100%
         max-width: 50%    
@@ -49,6 +29,10 @@
             text-align: left
             color: $darkblue
             text-decoration: underline
+            &:after
+                content: url(../images/Arrow_right_hover_list.png)
+                margin: 0 10px
+                line-height: 15px
 
     .date
         font-size: 12px
@@ -57,10 +41,6 @@
         font-weight: 700
         margin-bottom: 5px
 
-.slick-arrow.slick-next
-    right: 0
-.slick-arrow.slick-prev
-    left: 0
 
 
             

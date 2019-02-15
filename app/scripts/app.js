@@ -2307,9 +2307,7 @@ if (document.querySelector('.s_faq_content_questions_item')) {
   var questions = document.querySelectorAll('.s_faq_content_question');
   Array.prototype.forEach.call(questions, function (el) {
     el.onclick = function () {
-      var activeElem = document.querySelector('.s_faq_content_question p');
       this.nextElementSibling.classList.toggle('show');
-      activeElem.classList.toggle('active_question');
     };
   });
 }
