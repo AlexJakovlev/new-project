@@ -457,6 +457,7 @@ label.error {
   font-size: 12px;
   z-index: 5; }
 
+/* site-button */
 .site-button {
   font-size: 24px;
   padding: 12px 65px;
@@ -488,6 +489,7 @@ label.error {
       width: 100%;
       margin: 0 auto; } }
 
+/* site-button */
 * {
   font-family: 'Roboto', sans-serif;
   line-height: 1;
@@ -498,7 +500,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 h1 {
-  font-size: 36px;
+  font-size: 35px;
   text-align: center; }
   @media all and (max-width: 1024px) {
     h1 {
@@ -551,6 +553,7 @@ li {
   li:last-child {
     margin-bottom: 0; }
 
+/* popup */
 .s_popup {
   display: none;
   position: fixed;
@@ -608,6 +611,8 @@ li {
     background-color: #fff;
     padding: 20px 45px; }
 
+/* end popup */
+/* breadcrumbs */
 .s_breadcrumbs {
   margin-top: 22px; }
   .s_breadcrumbs_item {
@@ -622,6 +627,8 @@ li {
     .s_breadcrumbs_item.active_page:after {
       content: none; }
 
+/* end breadcrumbs */
+/* banner_main */
 @media all and (max-width: 639px) {
   .s_banner_main_image {
     display: none; } }
@@ -637,6 +644,8 @@ li {
   .s_banner_main_image_mob img {
     width: 100%; }
 
+/* end  banner_main */
+/* title_links */
 .s_title_links {
   margin-bottom: 40px; }
   .s_title_links_title h1 {
@@ -679,6 +688,8 @@ li {
           text-transform: none;
           font-weight: normal; }
 
+/* end title_links */
+/* about_company */
 .s_about_company {
   margin-bottom: 50px; }
   @media all and (max-width: 999px) {
@@ -838,6 +849,8 @@ li {
     display: inline-block;
     margin-bottom: 15px; }
 
+/* end about_company */
+/* advantages_allPages */
 .s_advantages_allPages {
   margin-bottom: 50px; }
   .s_advantages_allPages_header {
@@ -871,6 +884,8 @@ li {
       text-transform: uppercase;
       font-weight: 700; }
 
+/* end advantages_allPages */
+/* slider_clients */
 .s_slider_clients {
   margin-bottom: 50px; }
   @media all and (max-width: 999px) {
@@ -932,6 +947,8 @@ li {
   left: 0px;
   left: 10px; }
 
+/* end slider_clients */
+/* delivery_countries */
 .s_delivery_countries {
   margin-bottom: 40px; }
   @media all and (max-width: 999px) {
@@ -987,6 +1004,8 @@ li {
           .s_delivery_countries_wrapper_list ul li {
             background: url(../images/Arrow_right_hover_list.png) no-repeat 0 0px; } }
 
+/* end delivery_countries */
+/* traffic */
 .s_traffic {
   margin-bottom: 40px; }
   @media all and (max-width: 999px) {
@@ -1054,6 +1073,8 @@ li {
           .s_traffic_wrapper_list ul li {
             background: url(../images/Arrow_right_hover_list.png) no-repeat 0 0px; } }
 
+/* end traffic */
+/* review_block */
 .s_review_block {
   width: 100%;
   max-width: 50%; }
@@ -1087,6 +1108,8 @@ li {
       margin: 0 10px;
       line-height: 15px; }
 
+/* end review_block */
+/* reviews_news */
 .s_reviews_news {
   margin-bottom: 40px; }
   @media all and (max-width: 999px) {
@@ -1136,6 +1159,8 @@ li {
     font-weight: 700;
     margin-bottom: 5px; }
 
+/* end reviews_news */
+/* seo_text */
 .s_seo_text {
   margin-bottom: 40px; }
   @media all and (max-width: 999px) {
@@ -1175,6 +1200,8 @@ li {
     .s_seo_text_item h6 {
       font-size: 14px; }
 
+/* end seo_text */
+/* asociated */
 .s_asociated {
   display: none;
   margin-bottom: 40px; }
@@ -1197,3 +1224,5 @@ li {
       @media all and (max-width: 768px) {
         .s_asociated_pad p {
           margin-bottom: 20px; } }
+
+/* end asociated */
