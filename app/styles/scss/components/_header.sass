@@ -15,19 +15,19 @@
     margin-right: 10px
     +r(1024)
       display: none
-    .blue_phone_image
+    svg
       fill:#8ED9FF
-    .blue
-      padding-top: 1px
-    .white
-      display: none
+      padding: 0.3px
+      &:hover
+        fill: #ffffff
+        padding: 0px
    
   &_phone_number
     align-items: center
-    &:hover .white
-      display: block
-    &:hover .blue
-      display: none
+    // &:hover .white
+    //   display: block
+    // &:hover .blue
+    //   display: none
     p
       color: #fff
       font-size: 9px
@@ -55,13 +55,24 @@
     align-items: center
     +r(1024)
       display: none
+    &_phone
+      fill: $yellow
+      height: inherit
+      width: inherit
+      padding: 5px
+    // width: 32px
+    // margin-top: 20%
+    
     &:hover
-      .s_header_callback_arrows
-        transform: translate(-50%, -50%) rotate(179deg)
       .s_header_callback_phone
-        display: none
-      .s_header_callback_phone_hover
-        display: block 
+        fill: #fff
+      .s_header_callback_arrows 
+        transform:  rotate(179deg)
+        transition: 0.2s ease
+      // .s_header_callback_phone
+      //   display: none
+      // .s_header_callback_phone_hover
+      //   display: block 
       .s_header_callback_text
         p
           color: #fff;
@@ -75,34 +86,40 @@
       margin-right: 10px
       width: 32px
       height: 32px
-      img
-        position: absolute
-        transition: 0.2s ease
+      // img
+      //   position: absolute
+      //   transition: 0.2s ease
     &_arrows
+      height: inherit
+      width: inherit
       position: absolute
-      left: 50%
-      top: 50%
-      transform: translate(-50%, -50%)
-    &_phone,
-    &_phone_hover
-      position: absolute
-      left: 50%
-      top: 50%
-      transform: translate(-50%, -50%)
-    &_phone_hover
-      display: none
+      // left: 50%
+      // top: 50%
+      fill: #8ed9ff
+      // transform: rotate(179deg)
+      transition: 0.2s ease
+
+    &_phone
+    // &_phone_hover
+      // position: absolute
+      // left: 50%
+      // top: 50%
+      // transform: translate(-50%, -50%)
+    // &_phone_hover
+    //   display: none
     
   &_mail
+    fill: #8ed9ff;
     align-items: center
+    .mail_icon
+      height: 15px;
+      width: 21px
     +r(1024)
       display: none
     .mail_hover
       display: none
     &:hover
-      .mail_icon
-        display: none
-      .mail_hover
-        display: block
+      fill: #fff
     a
       margin-left: 10px
       color: #fff
@@ -124,40 +141,48 @@
   &_submit
     height: 22px
     width: 20px
-    padding-top: 3px
+    padding-top: 1px
     position: absolute
     right: 5px
-    top: 50%
+    top: 20%
     border: none
-    transform: translateY(-50%)
+    // transform: translateY(-50%)
     background: none
-    img
-      display: block
+    svg
+      height: inherit
+      width: inherit
+      stroke: #00a7db
   &_cabinet_client
     position: relative
     a
-      position: absolute
+      // position: absolute
       width: 21px
       height: 26px
-    .cabinet_blue
-      display: none
+    .cabinet_white
+      height: inherit;
+      width: inherit;
+      fill: #8ed9ff;
     .cabinet_yellow
       display: none
     &:hover
-      .cabinet_blue
-        display: block
-        +r(1024)
-        display: none
       .cabinet_white
-        display: none
+        fill: #ffffff
+        +r(1024)
+        // display: none
+      // .cabinet_white
+        // display: none
     +r(1024)
       .cabinet_white
-        display: none
-      .cabinet_yellow
-        display: block
+        fill: $yellow
+      // .cabinet_yellow
+      //   display: block
   &_social > a
     padding-right: 5px
   &_social
+    &_icons
+      height: 17px;
+      width: 17px;
+      fill: white;
     +r(1024)
       display: none
   &_languages
