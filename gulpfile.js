@@ -279,6 +279,7 @@ autoprefixer = require('gulp-autoprefixer');
 gulpSequence = require('gulp-sequence').use(gulp);
 shell = require('gulp-shell');
 plumber = require('gulp-plumber');
+rigger = require('gulp-rigger');
 // stripCssComments = require('gulp-strip-css-comments');
 
 gulp.task('browserSync', function() {
@@ -404,7 +405,7 @@ gulp.task('styles', function() {
                       includePaths: [
                           'app/styles/scss/'
                       ],
-                      outputStyle: 'compressed'
+                    //   outputStyle: 'gulpcompressed'
                 }))
                 .pipe(autoprefixer({
                    browsers: autoPrefixBrowserList,
@@ -416,7 +417,7 @@ gulp.task('styles', function() {
                 //the final filename of our combined css file
                 // .pipe(concat('styles.css'))
                 //get our sources via sourceMaps
-                .pipe(sourceMaps.write())
+                // .pipe(sourceMaps.write())
                 //where to save our final, compressed css file
                 .pipe(gulp.dest('app/styles/'))
                 //notify browserSync to refresh
@@ -524,14 +525,26 @@ gulp.task('scaffold', function() {
 //  startup the web server,
 //  start up browserSync
 //  compress all scripts and SCSS files
-gulp.task('default', ['browserSync', 'scripts', 'pug', 'styles'], function() {
+gulp.task('build-html', function() {
+    //watch any and all HTML files and refresh when something changes
+    return gulp.src('app/html/*.html')
+        .pipe(plumber())
+        .pipe(rigger())
+        // .pipe(browserSync.reload({stream: true}))
+        //catch errors
+        .pipe(gulp.dest('app/'))
+
+        .on('error', gutil.log);
+});
+
+gulp.task('default', ['browserSync', 'scripts', 'pug', 'styles','build-html'], function() {
 	//a list of watchers, so it will watch all of the following files waiting for changes
     gulp.watch('app/scripts/src/**', ['scripts']);
     gulp.watch('app/styles/scss/**', ['styles']);
 	gulp.watch('app/images/**', ['images']);
-	gulp.watch('app/pug/*.pug', ['pug']);
+    gulp.watch('app/pug/*.pug', ['pug']);
+    gulp.watch('app/html/**/*.html', ['build-html']);
     gulp.watch('app/*.html', ['html']);
 });
-
 //this is our deployment task, it will set everything for deployment-ready files
 gulp.task('deploy', gulpSequence('clean', 'scaffold', ['scripts-deploy', 'styles-deploy', 'images-deploy'], 'babel', 'css', 'html-deploy'));
