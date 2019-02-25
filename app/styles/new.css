@@ -624,7 +624,11 @@ li {
     display: none; }
     @media all and (max-width: 1024px) {
       .s_header_logo_mobile {
-        display: block; } }
+        display: block; }
+        .s_header_logo_mobile svg {
+          width: 105px;
+          height: 30px;
+          fill: #fff; } }
   @media all and (max-width: 1024px) {
     .s_header_phone_number {
       display: none; } }
