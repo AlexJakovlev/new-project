@@ -759,6 +759,11 @@ li {
       stroke: #00a7db; }
   .s_header_cabinet_client {
     position: relative; }
+    @media all and (max-width: 1024px) {
+      .s_header_cabinet_client {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; } }
     .s_header_cabinet_client a {
       width: 21px;
       height: 26px; }
@@ -838,6 +843,11 @@ li {
     @media all and (max-width: 639px) {
       .s_header_mail_pad {
         display: none; } }
+  @media all and (max-width: 1024px) {
+    .s_header_burger {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; } }
   .s_header_burger .site_burger {
     display: none; }
     @media all and (max-width: 1024px) {
