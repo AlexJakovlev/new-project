@@ -43,6 +43,8 @@
     display: none
     +r(1024)
       display: block
+      svg
+        fill: #fff
     +r(639)
       display: none
     p
@@ -52,7 +54,7 @@
       font-weight: 700
       line-height: 1
       color: #fff
-    object
+    svg
       margin-right: 5px
   
   &_callback
@@ -241,8 +243,11 @@
         font-size: 12px
         color: #047ba4
         line-height: 1
-        object
+        svg
           margin-top: 5px
+          fill: #124a85
+          height: 15px
+          width: 21px
     +r(639)
       display: none
   &_burger 
@@ -289,8 +294,11 @@
         a
             display: block
             text-align: center
-            object
+            svg
                 margin-top: 10px
+                fill: #ffffff
+                height: 15px
+                width: 21px
 /**Nav menu**/
 .s_nav
     &_wrapper

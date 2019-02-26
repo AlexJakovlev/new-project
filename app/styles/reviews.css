@@ -658,7 +658,9 @@ li {
     display: none; }
     @media all and (max-width: 1024px) {
       .s_header_phone_tab {
-        display: block; } }
+        display: block; }
+        .s_header_phone_tab svg {
+          fill: #fff; } }
     @media all and (max-width: 639px) {
       .s_header_phone_tab {
         display: none; } }
@@ -669,7 +671,7 @@ li {
       font-weight: 700;
       line-height: 1;
       color: #fff; }
-    .s_header_phone_tab object {
+    .s_header_phone_tab svg {
       margin-right: 5px; }
   .s_header_callback {
     -webkit-box-align: center;
@@ -838,8 +840,11 @@ li {
           font-size: 12px;
           color: #047ba4;
           line-height: 1; }
-          .s_header_mail_pad a object {
-            margin-top: 5px; } }
+          .s_header_mail_pad a svg {
+            margin-top: 5px;
+            fill: #124a85;
+            height: 15px;
+            width: 21px; } }
     @media all and (max-width: 639px) {
       .s_header_mail_pad {
         display: none; } }
@@ -895,8 +900,11 @@ li {
     .s_header_mobile_buttons a {
       display: block;
       text-align: center; }
-      .s_header_mobile_buttons a object {
-        margin-top: 10px; }
+      .s_header_mobile_buttons a svg {
+        margin-top: 10px;
+        fill: #ffffff;
+        height: 15px;
+        width: 21px; }
 
 /**Nav menu**/
 .s_nav_wrapper {
