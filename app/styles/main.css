@@ -1134,6 +1134,7 @@ li {
     .s_advantages_item svg {
       fill: #124a85;
       height: 56px;
+      width: 100px;
       display: block;
       margin: 0 auto;
       margin-bottom: 15px; }
@@ -1207,27 +1208,64 @@ li {
         display: block;
         margin: 0 auto;
         margin-bottom: 50px; } }
+    @media all and (max-width: 639px) {
+      .s_about_company_form_section {
+        width: 400px; } }
+    @media all and (max-width: 479px) {
+      .s_about_company_form_section {
+        width: 320px; } }
+    @media all and (max-width: 375px) {
+      .s_about_company_form_section {
+        width: 275px; } }
     .s_about_company_form_section p {
       text-align: center;
       color: #000;
       margin: 15px; }
     .s_about_company_form_section .title_form {
       font-size: 30px; }
+      @media all and (max-width: 639px) {
+        .s_about_company_form_section .title_form {
+          font-size: 25px; } }
+      @media all and (max-width: 479px) {
+        .s_about_company_form_section .title_form {
+          font-size: 20px; } }
+      @media all and (max-width: 375px) {
+        .s_about_company_form_section .title_form {
+          font-size: 18px; } }
     .s_about_company_form_section form {
       width: 452px;
       margin: 0 auto;
       display: block;
       font-size: 14px; }
+      @media all and (max-width: 639px) {
+        .s_about_company_form_section form {
+          width: 400px;
+          padding-left: 10px;
+          padding-right: 10px; } }
+      @media all and (max-width: 479px) {
+        .s_about_company_form_section form {
+          width: 320px; } }
+      @media all and (max-width: 375px) {
+        .s_about_company_form_section form {
+          width: 275px;
+          padding-left: 5px;
+          padding-right: 5px; } }
       .s_about_company_form_section form input {
         padding-left: 20px;
         width: 100%;
         height: 30px;
         margin-bottom: 10px; }
+        @media all and (max-width: 375px) {
+          .s_about_company_form_section form input {
+            font-size: 12px; } }
       .s_about_company_form_section form textarea {
         width: 100%;
         margin-bottom: 50px;
         padding-left: 20px;
         padding-top: 10px; }
+        @media all and (max-width: 375px) {
+          .s_about_company_form_section form textarea {
+            font-size: 12px; } }
       .s_about_company_form_section form button {
         background: #ffe27a;
         background: -webkit-linear-gradient(top, #ffe27a 4%, #ffe27a 4%, #ffcb05 5%, #ffcb05 95%, #fbaa19 95%);
@@ -1244,6 +1282,9 @@ li {
         border-radius: 3px;
         width: 150px;
         height: 40px; }
+        @media all and (max-width: 375px) {
+          .s_about_company_form_section form button {
+            font-size: 16px; } }
   .s_about_company .mob_button {
     display: none; }
     @media all and (max-width: 768px) {
@@ -1330,11 +1371,17 @@ li {
     padding: 0 50px;
     width: 50%;
     margin: 0 auto; }
-    .s_slider_clients_wrapper img {
-      padding: 0 10px; }
-    @media all and (max-width: 639px) {
+    @media all and (max-width: 1024px) {
+      .s_slider_clients_wrapper {
+        width: 60%; } }
+    @media all and (max-width: 768px) {
       .s_slider_clients_wrapper {
         width: 70%; } }
+    @media all and (max-width: 639px) {
+      .s_slider_clients_wrapper {
+        width: 90%; } }
+    .s_slider_clients_wrapper img {
+      padding: 0 10px; }
 
 .slick-arrow {
   position: absolute;
@@ -1476,6 +1523,9 @@ li {
     @media all and (max-width: 999px) {
       .s_traffic_wrapper_list {
         margin: 0 auto; } }
+    @media all and (max-width: 600px) {
+      .s_traffic_wrapper_list {
+        width: 100%; } }
     .s_traffic_wrapper_list ul {
       max-width: 550px;
       -webkit-column-count: 2;
@@ -1486,6 +1536,9 @@ li {
           margin: 0 auto;
           -webkit-column-count: 1;
                   column-count: 1; } }
+      @media all and (max-width: 479px) {
+        .s_traffic_wrapper_list ul {
+          margin: 0; } }
       .s_traffic_wrapper_list ul li {
         height: 30px;
         list-style: none;
@@ -1516,14 +1569,23 @@ li {
       .s_review_block_items {
         max-width: 574px;
         margin: 0 auto; } }
+    @media all and (max-width: 639px) {
+      .s_review_block_items {
+        max-width: 277px; } }
     .s_review_block_items_item {
       width: 100%;
       max-width: 50%;
       margin-bottom: 20px; }
+      @media all and (max-width: 639px) {
+        .s_review_block_items_item {
+          max-width: 100%; } }
   @media all and (max-width: 1024px) {
     .s_review_block_link {
       max-width: 574px;
       margin: 0 auto; } }
+  @media all and (max-width: 639px) {
+    .s_review_block_link {
+      max-width: 277px4; } }
   .s_review_block_link a {
     color: #124a85;
     text-decoration: underline; }
@@ -1566,6 +1628,9 @@ li {
           margin-bottom: 20px; } }
     .s_reviews_news_new_item_img {
       padding-right: 20px; }
+      @media all and (max-width: 600px) {
+        .s_reviews_news_new_item_img {
+          margin: 0 auto; } }
     .s_reviews_news_new_text {
       text-align: left; }
     .s_reviews_news_new_link {
@@ -1638,7 +1703,8 @@ li {
   .s_asociated_pad {
     display: block;
     margin: 0 auto;
-    width: 300px; }
+    width: 300px;
+    max-width: 100%; }
     .s_asociated_pad p {
       margin-bottom: 35px;
       text-align: center; }
@@ -1659,6 +1725,10 @@ li {
     .s_footer {
       padding-top: 20px;
       background-image: url(../images/pad_background_footer.png); } }
+  @media all and (max-width: 639px) {
+    .s_footer {
+      background-size: cover;
+      background-repeat: no-repeat; } }
   .s_footer_first_item {
     margin-bottom: 20px; }
     @media all and (max-width: 1024px) {

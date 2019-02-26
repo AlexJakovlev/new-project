@@ -1294,6 +1294,10 @@ li {
     .s_footer {
       padding-top: 20px;
       background-image: url(../images/pad_background_footer.png); } }
+  @media all and (max-width: 639px) {
+    .s_footer {
+      background-size: cover;
+      background-repeat: no-repeat; } }
   .s_footer_first_item {
     margin-bottom: 20px; }
     @media all and (max-width: 1024px) {
