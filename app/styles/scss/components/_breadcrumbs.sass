@@ -1,0 +1,15 @@
+/* breadcrumbs */ 
+.s_breadcrumbs
+    margin-top: 22px
+    &_item
+        display: inline-block
+        color: #000
+        &:after
+            content: url(../images/Arrow_right_hover_list.png)
+            margin: 0 10px
+            line-height: 15px
+    &_item.active_page
+        color: $darkblue
+        &:after
+            content: none
+/* end breadcrumbs */ 

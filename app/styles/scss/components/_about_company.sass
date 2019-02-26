@@ -1,0 +1,173 @@
+/* about_company */
+.s_about_company
+    margin-bottom: 50px;
+    +r(999)
+        margin-bottom: 30px
+    &_wrapper
+        +r(1024)
+            flex-direction: row-reverse
+            flex-wrap: wrap-reverse
+    &_text_section
+        max-width: 582px
+        width: 100%
+        +r(1024)
+            max-width: 100%
+        &_title
+            margin-bottom: 20px
+            .banner_pad_mob
+                display: none
+                +r(1024)
+                    display: block
+                    width: 100%
+                    margin-bottom: 18px
+        &_text
+            img
+                float: left
+                margin-right: 20px
+                +r(1024)
+                    display: none
+                
+    .blue_title
+        font-size: 18px
+        color: $blue
+        text-transform: uppercase
+        +r(1024)
+            text-transform: none
+            color: $darkblue
+            text-align: center
+            font-size: 24px
+        +r(768)
+            font-size: 20px
+        +r(639)
+            font-size: 18px
+    &_form_section
+        width: 487px
+        background-image: url(../images/background_form.jpg)
+        +r(1024)
+            display: block
+            margin: 0 auto
+            margin-bottom: 50px
+        +r(639)
+            width: 400px
+        +r(479)
+            width: 320px
+        +r(375)
+            width: 275px
+        p
+            text-align: center
+            color: #000
+            margin: 15px
+            
+        .title_form
+            font-size: 30px
+            +r(639)
+                font-size: 25px
+            +r(479)
+                font-size: 20px
+            +r(375)
+                font-size: 18px
+        form
+            width: 452px
+            margin: 0 auto
+            display: block
+            font-size: 14px
+            +r(639)
+                width: 400px
+                padding-left: 10px
+                padding-right: 10px
+            +r(479)
+                width: 320px
+            +r(375)
+                width: 275px
+                padding-left: 5px
+                padding-right: 5px
+            input
+                padding-left: 20px
+                text-align:center
+                width: 100%
+                height: 30px
+                margin-bottom: 10px
+                +r(375)
+                    font-size: 12px
+            textarea
+                width: 100%
+                margin-bottom: 50px
+                padding-left: 20px
+                padding-top: 10px
+                +r(375)
+                    font-size: 12px
+            button
+                background: #ffe27a /* Old browsers */
+                background: -moz-linear-gradient(top, #ffe27a 4%, #ffe27a 4%, #ffcb05 5%, #ffcb05 95%, #fbaa19 95%) /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #ffe27a 4%,#ffe27a 4%,#ffcb05 5%,#ffcb05 95%,#fbaa19 95%) /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #ffe27a 4%,#ffe27a 4%,#ffcb05 5%,#ffcb05 95%,#fbaa19 95%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe27a', endColorstr='#fbaa19',GradientType=0 ) /* IE6-9 */
+                color: #000
+                margin: 0 auto
+                display: block
+                margin-bottom: 15px
+                font-size: 18px
+                cursor: pointer
+                border: none
+                border-radius: 3px
+                width: 150px
+                height: 40px
+                +r(375)
+                    font-size: 16px
+    .mob_button
+        display: none
+        +r(768)
+            font-family: 'Roboto', sans-serif
+            display: block
+            margin-bottom: 20px
+            text-align: center
+            width: 100%
+            p
+                font-size: 12px
+                margin-bottom: 10px
+                a
+                    font-size: 22px
+                    color: #000
+    .hidden
+        display: block
+        +r(768)
+            display: none
+    .js-show-form
+        display: none
+        +r(768)
+            font-family: 'Roboto', sans-serif
+            display: block
+            margin: 0 auto
+            width: 200px
+            height: 45px
+            background: #ffe27a /* Old browsers */
+            background: -moz-linear-gradient(top, #ffe27a 4%, #ffe27a 4%, #ffcb05 5%, #ffcb05 95%, #fbaa19 95%) /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #ffe27a 4%,#ffe27a 4%,#ffcb05 5%,#ffcb05 95%,#fbaa19 95%) /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #ffe27a 4%,#ffe27a 4%,#ffcb05 5%,#ffcb05 95%,#fbaa19 95%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe27a', endColorstr='#fbaa19',GradientType=0 ) /* IE6-9 */
+            color: #000
+            border: none
+            font-size: 16px
+            cursor: pointer
+            border-radius: 3px
+    .hiddenButton
+        display: none
+    &_advantages_items_mob
+        display: none
+        justify-content: space-around
+        flex-wrap: wrap
+        width: 100%
+        +r(639)
+            display: block
+    .s_advantages_items
+        display: none
+        +r(639)
+            display: block
+            width: 100%
+            margin-bottom: 30px
+    .s_advantages_item
+        max-width: 50%
+        width: 49%
+        display: inline-block
+        margin-bottom: 15px
+/* end about_company */

@@ -1,0 +1,63 @@
+/* traffic */
+.s_traffic
+    margin-bottom: 40px
+    +r(999)
+        margin-bottom: 30px
+    &_wrapper
+        padding-top: 40px
+        padding-left: 600px
+        margin-bottom: 40px
+        max-width: 510px
+        background-image: url(../images/traffic_background.jpg) 
+        background-repeat: no-repeat
+        +r(1024)
+            padding-left: 400px
+            background-image: url(../images/pad_raffic_background.jpg)
+        +r(999)
+            background: none
+            max-width: 100%
+            width: 100%
+            padding-left: 0
+    &_banner_pad_mob
+        display: none
+        +r(999)
+            display: block
+            width: 100%
+            margin-bottom: 18px
+    &_wrapper_title
+        width: 400px
+        margin-bottom: 35px
+        +r(999)
+            width: 100%
+        h2
+            width: 400px
+            +r(999)
+                width: 100%
+                text-align: center
+    &_wrapper_list
+        width: 550px
+        +r(999)
+            margin: 0 auto
+        +r(600)
+            width: 100%
+        ul
+            max-width: 550px
+            column-count: 2
+            +r(600)
+                max-width: 320px
+                margin: 0 auto
+                column-count: 1
+            +r(479)
+                margin: 0
+            
+
+            li
+                height: 30px
+                list-style: none
+                background: url(../images/Arrow_right_list.jpg) no-repeat 0 0px
+                padding-left: 24px
+                &:hover
+                    background: url(../images/Arrow_right_hover_list.png) no-repeat 0 0px
+                +r(1024)
+                    background: url(../images/Arrow_right_hover_list.png) no-repeat 0 0px
+/* end traffic */

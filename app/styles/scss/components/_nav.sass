@@ -1,0 +1,122 @@
+/* .s_nav */
+.s_nav
+    &_wrapper
+        min-height: 80px
+        height: auto
+        align-items: center
+        +r(1024)
+            min-height: 15px
+    &_logo
+        width: 100%
+        max-width: 140px
+        margin-right: 60px
+        +r(1024)
+            display: none
+    &_list
+        max-width: 100%
+        width: 100%
+        align-self: flex-end
+        margin-bottom: 20px
+        +r(1024)
+            display: none
+        &_items > li
+            position: relative
+            height: 30px
+            margin-bottom: 0
+            > a
+                border-right: 1px solid $darkblue
+                line-height: 22px
+            .submenu
+                position: absolute
+                display: none;
+                width: 300px
+                margin: 0
+                padding: 10px 
+                top: 30px
+                z-index: 3
+                color: #fff
+                background-color: rgba(69, 181, 214, 0.73)
+                li
+                    &:hover
+                        color: #124a85
+                    a
+                        padding: 0
+                        &::after
+                            display: none
+            &:hover > ul.submenu
+                display: block
+    &_list_item
+        color: $darkblue
+        font-size: 15px
+  
+        a
+            transition: all 0.2s linear
+            width: 100%
+            padding: 0 15px;
+            position: relative
+            &::after
+                transition: all 0.2s linear
+                content: ""
+                display: block
+                position: absolute
+                right: 0%
+                bottom: -10px
+                width: 0
+                height: 3px
+                background: $darkblue
+            &:hover
+                &::after
+                    left: 0%
+                    width: 100% 
+     
+        +r(1199)
+            padding-right: 14px
+    &_menu
+        position: fixed
+        left: -100%
+        top: 0
+        right: 0
+        bottom: 0
+        max-width: none
+        width: 100%
+        max-width: 70%
+        height: 100%
+        -webkit-transition: all 0.2s ease-out
+        -moz-transition: all 0.2s ease-out
+        transition: all 0.2s ease-out
+    &_menu--open
+        left: 0
+        z-index: 30
+    &_menu_list
+        -webkit-transition: all 0.2s ease-out
+        -moz-transition: all 0.2s ease-out
+        transition: all 0.2s ease-out
+        padding-top: 50px
+        padding-left: 15px
+        padding-right: 40px
+        width: 70%
+        height: 100%
+        background: #124277
+        text-transform: uppercase
+        font-size: 14px
+        color: #fff
+        display: block
+        overflow: auto
+        > li
+            width: 100%
+            height: 45px
+            margin-bottom: 0
+            padding-top: 12px
+            padding-left: 5px
+            border-bottom: 1px solid #8ed9ff
+            position: relative
+            .submenu
+                display: none
+                padding-left: 10px
+                width: 100%
+                position: absolute
+                top: 0
+                z-index: 35
+            &:hover > ul.submenu
+                display: block
+/* end nav */
