@@ -282,7 +282,7 @@ plumber = require('gulp-plumber');
 rigger = require('gulp-rigger');
 // stripCssComments = require('gulp-strip-css-comments');
 
-gulp.task('browserSync', function() {
+gulp.task('browserSync',['scripts', 'pug', 'styles','build-html'], function() {
     browserSync({
         server: {
             baseDir: "app/"
@@ -537,7 +537,7 @@ gulp.task('build-html', function() {
         .on('error', gutil.log);
 });
 
-gulp.task('default', ['browserSync', 'scripts', 'pug', 'styles','build-html'], function() {
+gulp.task('default', ['browserSync', function() {
 	//a list of watchers, so it will watch all of the following files waiting for changes
     gulp.watch('app/scripts/src/**', ['scripts']);
     gulp.watch('app/styles/scss/**', ['styles']);
