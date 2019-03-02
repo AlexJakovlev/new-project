@@ -36,6 +36,7 @@
         p
             margin-bottom: 10px
     .s_new_content_form_reviews
+        width: 847
         +r(1024)
             width: 100%
             max-width: 100%
@@ -123,62 +124,63 @@
             border-radius: 3px
     .hiddenButton
         display: none
-    .s_slider_client_allpages
-        margin-bottom: 50px
-        max-width: 487px
-        +r(1024)
-            margin: 0 auto
-            margin-bottom: 50px
-        +r(999)
-            margin-bottom: 30px
-        .s_slider_clients_title
-            text-align: center
-            margin-bottom: 35px
-            +r(999)
-                margin-bottom: 30px
-            +r(768)
-                margin-bottom: 20px
-            .headerTwo
-                color: $darkblue
-        .s_slider_clients_wrapper
-            padding: 0 50px
-            margin: 0 auto
-            img
-                padding: 0 10px
-            +r(639)
-                width: 70%
-    .slick-arrow
-        position: absolute
-        top: 50%
-        cursor: pointer
-        display: inline-block
-        border: none
-        font-size: 0
-        outline: none
-        z-index: 10000000
-        background: url(../images/Arrow_left1.png)
-        width: 20px
-        height: 18px
-        padding: 3px
-        background-size: cover
-        &:hover
-            background: url(../images/Arrow_left_hover.png)
-            background-size: cover
-            background-repeat: no-reapet
-    .slick-arrow.slick-next
-        right: -45px
-        transform: translateY(-50%) rotate(-180deg)
-        +r(1365)
-            right: 0px
-        +r(1023)
-            right: 10px
-    .slick-arrow.slick-prev
-        transform: translateY(-50%) rotate(0deg)
-        left: -45px
-        +r(1365)
-            left: 0px
-        +r(1023)
-            left: 10px 
+    @import 'slider'
+    // .s_slider_client_allpages
+    //     margin-bottom: 50px
+    //     max-width: 487px
+    //     +r(1024)
+    //         margin: 0 auto
+    //         margin-bottom: 50px
+    //     +r(999)
+    //         margin-bottom: 30px
+    //     .s_slider_clients_title
+    //         text-align: center
+    //         margin-bottom: 35px
+    //         +r(999)
+    //             margin-bottom: 30px
+    //         +r(768)
+    //             margin-bottom: 20px
+    //         .headerTwo
+    //             color: $darkblue
+    //     .s_slider_clients_wrapper
+    //         padding: 0 50px
+    //         margin: 0 auto
+    //         img
+    //             padding: 0 10px
+    //         +r(639)
+    //             width: 70%
+    // .slick-arrow
+    //     position: absolute
+    //     top: 50%
+    //     cursor: pointer
+    //     display: inline-block
+    //     border: none
+    //     font-size: 0
+    //     outline: none
+    //     z-index: 10000000
+    //     background: url(../images/Arrow_left1.png)
+    //     width: 20px
+    //     height: 18px
+    //     padding: 3px
+    //     background-size: cover
+    //     &:hover
+    //         background: url(../images/Arrow_left_hover.png)
+    //         background-size: cover
+    //         background-repeat: no-reapet
+    // .slick-arrow.slick-next
+    //     right: -45px
+    //     transform: translateY(-50%) rotate(-180deg)
+    //     +r(1365)
+    //         right: 0px
+    //     +r(1023)
+    //         right: 10px
+    // .slick-arrow.slick-prev
+    //     transform: translateY(-50%) rotate(0deg)
+    //     left: -45px
+    //     +r(1365)
+    //         left: 0px
+    //     +r(1023)
+    //         left: 10px 
     .s_reviews_news_new
         margin-bottom: 50px
         &_items
