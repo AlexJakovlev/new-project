@@ -4,11 +4,12 @@
 
 // components
 @import 'components/header';
-@import 'components/mob_header_slider_main';
 @import 'components/slider_main';
+@import 'components/_mob_header_slider_main';
+@import 'components/slider_clients';
 @import 'components/advantages';
 @import 'components/about_company';
-@import 'components/slider_clients';
+// @import 'components/slider';
 @import 'components/delivery_countries';
 @import 'components/traffic';
 @import 'components/review_block';

@@ -282,7 +282,7 @@ plumber = require('gulp-plumber');
 rigger = require('gulp-rigger');
 // stripCssComments = require('gulp-strip-css-comments');
 
-gulp.task('browserSync',['scripts', 'pug', 'styles','build-html'], function() {
+gulp.task('browserSync',['scripts', 'pug', 'styles','build-html','html'], function() {
     browserSync({
         server: {
             baseDir: "app/"
@@ -417,7 +417,7 @@ gulp.task('styles', function() {
                 //the final filename of our combined css file
                 // .pipe(concat('styles.css'))
                 //get our sources via sourceMaps
-                // .pipe(sourceMaps.write())
+                .pipe(sourceMaps.write())
                 //where to save our final, compressed css file
                 .pipe(gulp.dest('app/styles/'))
                 //notify browserSync to refresh
@@ -537,7 +537,7 @@ gulp.task('build-html', function() {
         .on('error', gutil.log);
 });
 
-gulp.task('default', ['browserSync', function() {
+gulp.task('default', ['browserSync'], function() {
 	//a list of watchers, so it will watch all of the following files waiting for changes
     gulp.watch('app/scripts/src/**', ['scripts']);
     gulp.watch('app/styles/scss/**', ['styles']);
