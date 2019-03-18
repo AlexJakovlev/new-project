@@ -280,6 +280,7 @@ gulpSequence = require('gulp-sequence').use(gulp);
 shell = require('gulp-shell');
 plumber = require('gulp-plumber');
 rigger = require('gulp-rigger');
+svgSprite = require('gulp-svg-sprites');
 // stripCssComments = require('gulp-strip-css-comments');
 
 gulp.task('browserSync',['scripts', 'pug', 'styles','build-html','html'], function() {
@@ -536,12 +537,38 @@ gulp.task('build-html', function() {
 
         .on('error', gutil.log);
 });
+gulp.task('svg', function () {
+    var ep,name;
+    gulp.src(['app/images/svg/*','!app/images/svg/*.*'])
+        .on('data', function (event) {
+             ep = event.path;
+             name = ep.split('/');
+             name = name[name.length-1]+'-sprite';
+            gulp.src(event.path+'/*.svg')
+                // .on('data', function (event){
+                //     console.log(name)
+                // })
+                .pipe(svgSprite({
+                    mode: "symbols",
+                    preview: {
+                        symbols: name+'.html',
+                    },
+                    svg: {
+                        symbols: name+'.svg',
+                    },
+                    svgId: ":%f"
+                }))
+                .pipe(gulp.dest("app/images/svg/"))
+                .pipe(browserSync.reload({ stream: true }))
+        })
+});
 
 gulp.task('default', ['browserSync'], function() {
 	//a list of watchers, so it will watch all of the following files waiting for changes
     gulp.watch('app/scripts/src/**', ['scripts']);
     gulp.watch('app/styles/scss/**', ['styles']);
-	gulp.watch('app/images/**', ['images']);
+    gulp.watch(['app/images/**','!app/images/svg/**'], ['images']);
+    gulp.watch(['app/images/svg/**','!app/images/svg/*.*'], ['svg']);
     gulp.watch('app/pug/*.pug', ['pug']);
     gulp.watch('app/html/**/*.html', ['build-html']);
     gulp.watch('app/*.html', ['html']);
