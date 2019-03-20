@@ -558,7 +558,7 @@ gulp.task('svg', function () {
                     },
                     svgId: ":%f"
                 }))
-                .pipe(gulp.dest("app/images/svg/"))
+                .pipe(gulp.dest("./app/images/svg/"))
                 .pipe(browserSync.reload({ stream: true }))
         })
 });
