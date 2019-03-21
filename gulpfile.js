@@ -538,27 +538,30 @@ gulp.task('build-html', function() {
         .on('error', gutil.log);
 });
 gulp.task('svg', function () {
-    var ep,name;
-    gulp.src(['app/images/svg/*','!app/images/svg/*.*'])
+    var ep, name;
+    var path = 'app/images/svg/';
+    gulp.src([path + '*', '!app/images/svg/*.*'])
         .on('data', function (event) {
-             ep = event.path;
-             name = ep.split('/');
-             name = name[name.length-1]+'-sprite';
-            gulp.src(event.path+'/*.svg')
+            ep = event.path;
+            name = ep.split('/');
+            name = name[name.length - 1];
+            var pp = path + name + '/*.svg';
+            console.log(pp);
+            gulp.src(pp)
                 // .on('data', function (event){
-                //     console.log(name)
+                //     console.log(event);
                 // })
                 .pipe(svgSprite({
                     mode: "symbols",
                     preview: {
-                        symbols: name+'.html',
+                        symbols: name + '-sprite.html',
                     },
                     svg: {
-                        symbols: name+'.svg',
+                        symbols: name + '-sprite.svg',
                     },
                     svgId: ":%f"
                 }))
-                .pipe(gulp.dest("./app/images/svg/"))
+                .pipe(gulp.dest(path))
                 .pipe(browserSync.reload({ stream: true }))
         })
 });
