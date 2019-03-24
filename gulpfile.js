@@ -282,7 +282,16 @@ plumber = require('gulp-plumber');
 rigger = require('gulp-rigger');
 svgSprite = require('gulp-svg-sprites');
 // stripCssComments = require('gulp-strip-css-comments');
-
+webpackStream = require('webpack-stream');
+webpack = require('webpack');
+BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+gulp.task('wS', function () {
+    return gulp.src('./dist/**/*.*')
+    .pipe(webpackStream({
+        plugins: [
+            new BundleAnalyzerPlugin()
+        ]
+    }))});
 gulp.task('browserSync',['scripts', 'pug', 'styles','build-html','html'], function() {
     browserSync({
         server: {
@@ -435,7 +444,7 @@ gulp.task('styles-deploy', function() {
                       includePaths: [
                           'app/styles/scss/',
                       ],
-                      outputStyle: 'compressed'
+                    outputStyle: 'compact'
                 }))
                 .pipe(autoprefixer({
                   browsers: autoPrefixBrowserList,
