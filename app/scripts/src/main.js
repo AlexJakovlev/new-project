@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
        }
      })
    }
- 
-    
-  
+
+
+
 
 
    //validation
@@ -90,15 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
   if(document.querySelector('.js-open-delivery')){
     $('.js-open-delivery').click(function(e){
       var linkEvent = $(this).attr("href");
-      var idPopup = linkEvent.slice(1);
-      console.log(linkEvent);
-      console.log(idPopup);
     e.preventDefault();
-     var sliderContacts = document.querySelector('.slider-contacts');
-     console.log(sliderContacts);
-    $('#'+ idPopup).fadeIn();
-    $('.slider-contacts').slick();
-      
+    $(linkEvent).fadeIn();
+    $(linkEvent).find('.slider-contacts').slick();
+
     })
   }
   // js-close popup
@@ -121,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector('#contacts-popup').reset();
     }
   });
-  
+
   // js-close popup
   if(document.querySelector('.s_slider_main')){
     $('.s_slider_main_images').slick({
@@ -131,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
-  
+
   if(document.querySelector('.s_mob_header_slider_main')){
     $('.s_mob_header_slider_main_images').slick({
       infinite: true,
@@ -149,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
   }
-  
+
   if(document.querySelector('.js_slider_client')){
     $('.js_slider_client').slick({
       infinite: true,
@@ -175,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if(document.querySelector('.wow') && window.innerWidth > 1024){
     new WOW().init();
   }
-    
+
 });
 
 
@@ -183,10 +178,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('DOMContentLoaded', DOMContentLoaded);
 
   function DOMContentLoaded() {
-		var buttonNode = document.querySelector('.js-show-form');
+    var buttonNode = document.querySelector('.js-show-form');
+    if(buttonNode){
     buttonNode.addEventListener('click', showForm);
   }
-    
+  }
+
   function showForm() {
   	var button = document.querySelector('.js-show-form');
   	var node = document.querySelector('.js-form');

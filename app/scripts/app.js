@@ -2206,14 +2206,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (document.querySelector('.js-open-delivery')) {
     $('.js-open-delivery').click(function (e) {
       var linkEvent = $(this).attr("href");
-      var idPopup = linkEvent.slice(1);
-      console.log(linkEvent);
-      console.log(idPopup);
       e.preventDefault();
-      var sliderContacts = document.querySelector('.slider-contacts');
-      console.log(sliderContacts);
-      $('#' + idPopup).fadeIn();
-      $('.slider-contacts').slick();
+      $(linkEvent).fadeIn();
+      $(linkEvent).find('.slider-contacts').slick();
     });
   }
   // js-close popup
@@ -2292,7 +2287,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function DOMContentLoaded() {
     var buttonNode = document.querySelector('.js-show-form');
-    buttonNode.addEventListener('click', showForm);
+    if (buttonNode) {
+      buttonNode.addEventListener('click', showForm);
+    }
   }
 
   function showForm() {
